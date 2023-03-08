@@ -1,5 +1,7 @@
 #! /bin/sh
 
-mysql -u $USUARIO_BOOKMEDIK --password=$CONTRA_BOOKMEDIK -h $DATABASE_HOST $NOMBRE_DB < /var/www/html/schema.sql
+sleep 10
+
+mysql -u $BOOKMEDIK_DB_USER --password=$BOOKMEDIK_DB_PASSWORD -h $BOOKMEDIK_DB_HOST $BOOKMEDIK_DB_NAME < /var/www/html/schema.sql
 
 /usr/sbin/apache2ctl -D FOREGROUND
