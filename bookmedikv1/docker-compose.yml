@@ -15,7 +15,7 @@ services:
       - db
   db:
     container_name: bd_mariadb
-    image: mariadb
+    image: mariadb:latest
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: root

@@ -1,4 +1,4 @@
-k<?php
+<?php
 class Database {
         public static $db;
         public static $con;
