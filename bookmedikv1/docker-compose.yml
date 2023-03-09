@@ -2,7 +2,7 @@ version: '3.3'
 services:
   bookmedik:
     container_name: bookmedik-app
-    image: afermor8/bookmedik:v2
+    image: afermor8/bookmedik:v1
     restart: always
     environment:
       USUARIO_BOOKMEDIK: admin
@@ -10,12 +10,12 @@ services:
       HOST_DB: bd_mariadb
       NOMBRE_DB: bookmedik
     ports:
-      - 8081:80
+      - 8080:80
     depends_on:
       - db
   db:
     container_name: bd_mariadb
-    image: mariadb:latest
+    image: mariadb
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: root
